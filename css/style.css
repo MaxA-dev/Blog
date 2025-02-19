@@ -1,0 +1,280 @@
+/* ==========================
+   VARIABLES & GLOBAL STYLES
+   ========================== */
+   :root {
+    /* Main gradient colors (for hero) */
+    --gradient-start: #f9ecff;   /* Light pink/purple */
+    --gradient-mid:   #fce4ff;   /* Slightly deeper pink/purple */
+    --gradient-end:   #eef7ff;   /* Light bluish tint */
+  
+    /* Accent colors & text */
+    --primary-text-color: #2c2c2c;
+    --secondary-text-color: #5e5e5e;
+    --btn-primary-bg: #8a63ff;   /* Purple button color */
+    --btn-primary-text: #ffffff;
+  
+    /* Font sizes */
+    --h1-size: 3rem;
+    --h2-size: 2rem;
+    --body-font: 'Helvetica Neue', Arial, sans-serif;
+  
+    /* Spacing */
+    --section-padding: 60px;
+  }
+  
+  /* Reset & Global */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--body-font);
+    color: var(--secondary-text-color);
+    background-color: #ffffff;
+    line-height: 1.6;
+  }
+  
+  /* ==========================
+     TOP NAVIGATION
+     ========================== */
+  .top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-text-color);
+    text-decoration: none;
+  }
+  
+  .top-nav nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .top-nav nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .top-nav nav ul li a:hover {
+    color: var(--primary-text-color);
+  }
+  
+  .header-cta .btn-primary {
+    padding: 10px 20px;
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .header-cta .btn-primary:hover {
+    background-color: #6e49ff;
+  }
+  
+  /* ==========================
+     HERO SECTION
+     ========================== */
+  .hero-section {
+    /* Soft gradient background */
+    background: linear-gradient(
+      180deg,
+      var(--gradient-start) 0%,
+      var(--gradient-mid) 50%,
+      var(--gradient-end) 100%
+    );
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero-content h1 {
+    font-size: var(--h1-size);
+    margin-bottom: 20px;
+    color: var(--primary-text-color);
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: var(--secondary-text-color);
+  }
+  
+  .hero-content .btn-primary {
+    padding: 14px 30px;
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .hero-content .btn-primary:hover {
+    background-color: #6e49ff;
+    transform: translateY(-3px);
+  }
+  
+  /* ==========================
+     CAROUSEL SECTION
+     ========================== */
+  /* --- Carousel Section Wrapper --- */
+  /* Basic reset */
+  .section-header {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 5%;
+    font-weight: bold;
+    font-size: var(--h1-size);
+    color: var(--primary-text-color);
+  }
+  
+  /* Wrapper for all cards */
+  .card-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Individual Card */
+  .card {
+    /*background-color: #6e49ff; /* Light purple background */
+    
+    color: white;
+    width: 280px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover Effect */
+ 
+  
+  /* Card Image */
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  /* Card Title */
+  .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  /* Card Description */
+  .card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: black;
+  }
+  
+  /* Card Link */
+  .card-link {
+    display: inline-block;
+    background-color: white;
+    color: #6e49ff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Hover Effect for Link */
+  .card-link:hover {
+    background-color: #fff;
+    color: #4a2dbf;
+  }
+  
+  /* --- Show All link (optional) --- */
+  .show-all {
+    margin-top: 20px;
+  }
+  .show-all a {
+    text-decoration: none;
+    color: #8a63ff;
+    font-weight: bold;
+  }
+  .show-all a:hover {
+    color: #6e49ff;
+  }
+  
+  
+  
+  
+  /* ==========================
+     FOOTER
+     ========================== */
+     .footer-section {
+        /* Soft gradient background */
+        background: linear-gradient(
+          180deg,
+          var(--gradient-start) 0%,
+          var(--gradient-mid) 50%,
+          var(--gradient-end) 100%
+        );
+        text-align: center;
+        padding: 100px 20px;
+        margin-top: 5%;
+      }
+      
+      .footer-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      
+      .footer-content h1 {
+        font-size: var(--h1-size);
+        margin-bottom: 20px;
+        color: var(--primary-text-color);
+      }
+      
+      .footer-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+        color: var(--secondary-text-color);
+      }
+      
+      .footer-content .btn-primary {
+        padding: 14px 30px;
+        background-color: var(--btn-primary-bg);
+        color: var(--btn-primary-text);
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+      
+      .hero-content .btn-primary:hover {
+        background-color: #6e49ff;
+        transform: translateY(-3px);
+      }
+  
