@@ -278,3 +278,18 @@
         transform: translateY(-3px);
       }
   
+      .attribution {
+        text-align: center;
+        font-size: 0.875rem;
+        color: #888;
+        margin-top: 20px;
+      }
+      
+      .attribution a {
+        color: #888;
+        text-decoration: none;
+      }
+      
+      .attribution a:hover {
+        text-decoration: underline;
+      }

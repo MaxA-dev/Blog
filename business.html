@@ -3,62 +3,103 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Business Content</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Insights: Leadership & AI</title>
+  <link rel="stylesheet" href="css/insights.css" />
 </head>
 <body>
-  <!-- Reused header -->
-  <header class="header">
-    <nav class="nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="data-analytics.html">Data Analytics</a></li>
-        <li><a href="about.html">About Me</a></li>
-      </ul>
-    </nav>
-    <div class="header-curve">
-      <svg viewBox="0 0 1440 320">
-        <path fill="#f3f4f6" fill-opacity="1" d="M0,256L48,240C96,224,192,192,288,176C384,160,480,160,576,186.7C672,213,768,267,864,272C960,277,1056,235,1152,218.7C1248,203,1344,213,1392,218.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-      </svg>
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <div class="logo">
+      <a>Maximilian Arold</a>
+    </div>
+    <div class="header-cta">
+      <a href="index.html" class="btn-primary">Home</a>
     </div>
   </header>
 
-  <!-- Main Business Content -->
+  <!-- Main Content -->
   <main>
-    <section class="content-list">
-      <h1>Business Content</h1>
-      <div class="card-container">
-        <div class="card">
-          <h3>Business Strategy Trends</h3>
-          <p>Published on: 2025-02-10</p>
-          <p>
-            Detailed analysis on emerging trends in business strategy with insights on market disruptions and future leadership.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Digital Transformation</h3>
-          <p>Published on: 2025-02-05</p>
-          <p>
-            Insights into the processes behind successful digital transformation and technology adoption.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Organizational Learning</h3>
-          <p>Published on: 2025-01-30</p>
-          <p>
-            A comprehensive overview of fostering continuous improvement and building a learning organization.
-          </p>
+    <div class="insights-container">
+      <h1>Insights: Leadership & AI</h1>
+      <div class="tabs">
+        <!-- Radio buttons for tab switching -->
+        <input type="radio" id="tab-leadership" name="tabs" checked />
+        <label for="tab-leadership">Leadership</label>
+        <input type="radio" id="tab-ai" name="tabs" />
+        <label for="tab-ai">AI Insights</label>
+
+        <!-- Scrollable area containing the tab contents -->
+        <div class="scrollable-content">
+          <!-- Leadership Insights -->
+          <div class="tab-content" id="content-leadership">
+            <div class="insight-card">
+              <h3 class="insight-title">Empowering Leaders through Empathy</h3>
+              <p class="insight-summary">
+                Discover how empathetic leadership fosters innovation and builds resilient teams.
+              </p>
+            </div>
+            <div class="insight-card">
+              <h3 class="insight-title">Innovative Leadership Styles</h3>
+              <p class="insight-summary">
+                Examining forward-thinking leadership that drives continuous improvement.
+              </p>
+            </div>
+            <!-- Add more leadership cards as needed -->
+          </div>
+
+          <!-- AI Insights -->
+          <div class="tab-content" id="content-ai">
+            <!-- AI Insight Card 1 -->
+            <div class="insight-card">
+              <div class="card-content">
+                <h3 class="insight-title">The Future of AI in Business</h3>
+                <p class="insight-summary">
+                  Explore the transformative impact of AI on various industries and business processes.
+                </p>
+              </div>
+              <div class="card-image">
+                <img src="images/ai-future-thumb.jpg" alt="AI Future Concept" class="insight-thumbnail" onclick="openModal('images/ai-future.jpg')">
+              </div>
+            </div>
+            <!-- AI Insight Card 2 -->
+            <div class="insight-card">
+              <div class="card-content">
+                <h3 class="insight-title">AI-Driven Customer Experience</h3>
+                <p class="insight-summary">
+                  How AI personalizes customer journeys and boosts satisfaction.
+                </p>
+              </div>
+              <div class="card-image">
+                <img src="pic/Analyze-bro.png" alt="AI Customer Experience" class="insight-thumbnail" onclick="openModal('pic/Analyze-bro.png')">
+              </div>
+            </div>
+            <!-- Add more AI cards as needed -->
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>
-      Contact: your.email@example.com | LinkedIn:
-      <a href="https://www.linkedin.com/in/yourprofile" target="_blank">yourprofile</a>
-    </p>
-  </footer>
+  <!-- Single Modal for Full-Size Images -->
+  <div id="image-modal" class="image-modal" onclick="closeModal()">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <!-- Stop click propagation on image so that clicking the image doesn't close the modal -->
+    <img class="modal-content" id="modal-img" onclick="event.stopPropagation()">
+  </div>
+
+  <!-- JavaScript for Modal Functionality -->
+  <script>
+    function openModal(imageSrc) {
+      const modal = document.getElementById('image-modal');
+      const modalImg = document.getElementById('modal-img');
+      modalImg.src = imageSrc;
+      modal.style.display = 'flex';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('image-modal');
+      modal.style.display = 'none';
+    }
+  </script>
 </body>
 </html>

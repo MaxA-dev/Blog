@@ -1,0 +1,154 @@
+/* ==========================
+   VARIABLES & GLOBAL STYLES
+   ========================== */
+   :root {
+    /* Main gradient colors (for hero) */
+    --gradient-start: #f9ecff;   /* Light pink/purple */
+    --gradient-mid:   #fce4ff;   /* Slightly deeper pink/purple */
+    --gradient-end:   #eef7ff;   /* Light bluish tint */
+  
+    /* Accent colors & text */
+    --primary-text-color: #2c2c2c;
+    --secondary-text-color: #5e5e5e;
+    --btn-primary-bg: #8a63ff;   /* Purple button color */
+    --btn-primary-text: #ffffff;
+  
+    /* Font sizes */
+    --h1-size: 3rem;
+    --h2-size: 2rem;
+    --body-font: 'Helvetica Neue', Arial, sans-serif;
+  
+    /* Spacing */
+    --section-padding: 60px;
+  }
+  
+  /* Reset & Global */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--body-font);
+    color: var(--secondary-text-color);
+    background-color: #ffffff;
+    line-height: 1.6;
+    overflow: hidden;
+  }
+  
+  /* Purple header (from your previous files) */
+
+  
+  /* Dashboard Grid:
+     2 rows, top row spans 2 columns (large revenue card),
+     bottom row: 2 half-width cards side by side. */
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.55fr 0.45fr;  /* 55% height top, 45% bottom */
+    gap: 10px;
+    height: calc(100vh - 80px); /* Subtract header's height (~80px) */
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* The top card spans both columns in row 1 */
+  #revenue-card {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+  
+  /* Bottom-left (donut) */
+  #donut-card {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  /* Bottom-right (bar) */
+  #bar-card {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  
+  /* Card styling */
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    overflow: hidden; /* Hide chart overflow if needed */
+  }
+  
+  /* Card header for text at the top of each card */
+  .card-header {
+    margin-bottom: 5px;
+  }
+  .card-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+  }
+  .card-subtitle {
+    font-size: 0.8rem;
+    color: #999;
+  }
+  
+  /* The .chart fills remaining space in the card */
+  .chart {
+    flex: 1;
+    width: 100%;
+  }
+  /* ==========================
+     TOP NAVIGATION
+     ========================== */
+     .top-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 40px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #f0f0f0;
+      }
+      
+      .logo a {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--primary-text-color);
+        text-decoration: none;
+      }
+      
+      .top-nav nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+      }
+      
+      .top-nav nav ul li a {
+        text-decoration: none;
+        color: var(--secondary-text-color);
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+      
+      .top-nav nav ul li a:hover {
+        color: var(--primary-text-color);
+      }
+      
+      .header-cta .btn-primary {
+        padding: 10px 20px;
+        background-color: var(--btn-primary-bg);
+        color: var(--btn-primary-text);
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+      
+      .header-cta .btn-primary:hover {
+        background-color: #6e49ff;
+      }

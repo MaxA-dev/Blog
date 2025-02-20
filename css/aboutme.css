@@ -1,0 +1,189 @@
+:root {
+    /* Main gradient colors (for hero) */
+    --gradient-start: #f9ecff;   /* Light pink/purple */
+    --gradient-mid:   #fce4ff;   /* Slightly deeper pink/purple */
+    --gradient-end:   #eef7ff;   /* Light bluish tint */
+  
+    /* Accent colors & text */
+    --primary-text-color: #2c2c2c;
+    --secondary-text-color: #5e5e5e;
+    --btn-primary-bg: #8a63ff;   /* Purple button color */
+    --btn-primary-text: #ffffff;
+  
+    /* Font sizes */
+    --h1-size: 3rem;
+    --h2-size: 2rem;
+    --body-font: 'Helvetica Neue', Arial, sans-serif;
+  
+    /* Spacing */
+    --section-padding: 60px;
+  }
+  
+  /* ==========================
+     TOP NAVIGATION
+     ========================== */
+  .top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-text-color);
+    text-decoration: none;
+  }
+  
+  .top-nav nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .top-nav nav ul li a {
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .top-nav nav ul li a:hover {
+    color: var(--primary-text-color);
+  }
+  
+  .header-cta .btn-primary {
+    padding: 10px 20px;
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .header-cta .btn-primary:hover {
+    background-color: #6e49ff;
+  }
+  
+  /* Reset & Global */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--body-font);
+    color: var(--secondary-text-color);
+    background: linear-gradient(
+      120deg,
+      var(--gradient-start),
+      var(--gradient-mid),
+      var(--gradient-end)
+    );
+    line-height: 1.6;
+   
+  }
+  
+  /* Container */
+  .about-container {
+    max-width: 70%;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center; /* Center the text for a modern look */
+  }
+  
+  /* Profile Image */
+  .profile img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid var(--btn-primary-bg); /* Main accent color */
+    display: block;
+    margin: 0 auto 15px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .profile img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Heading */
+  h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Tagline */
+  .tagline {
+    font-size: 1.2rem;
+    color: var(--btn-primary-bg);
+    font-style: italic;
+    margin-bottom: 25px;
+  }
+  
+  /* Bio Text */
+  .bio {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  /* Subtle Highlights */
+  .bio .highlight {
+    color: var(--btn-primary-bg);
+    font-weight: 600;
+  }
+  
+  /* Buttons */
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  /* Primary Button */
+  .primary-btn {
+    background-color: var(--btn-primary-bg);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .primary-btn:hover {
+    background-color: #754edc;
+  }
+  
+  /* Secondary Button */
+  .secondary-btn {
+    border: 2px solid var(--btn-primary-bg);
+    color: var(--btn-primary-bg);
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .secondary-btn:hover {
+    background-color: var(--btn-primary-bg);
+    color: white;
+  }
+  
